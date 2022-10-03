@@ -8,13 +8,15 @@ import pandas as pd
 # df.loc[df['column-name'] == "desired-value-in-column"] 
 # is a way to print out all elements that share that same value in the same column.
 # For example print((df.loc[df['HP'] == 90])) would print out all rows where the HP column has the value of 90
+# df.sort_values('name-of-column') sorts everything by given column. 
+# df.sort_values('name-of-column', ascending=False) would be reverse.
+# df['Attack + Defense'] = df['Attack'] + df['Defense'] is a way to create a new column that is the total of other columns.
 
 # There are built in pandas functions for csv(read_csv('')), excel(read_excel('')) and txt files.
 # txt files uses the read_csv but with a delimiter. 
 
 df = pd.read_csv('pokemon_data.csv')
+df['Attack + Defense'] = df['Attack'] + df['Defense']
 #df_excel = pd.read_excel('pokemon_data.xlsx')
 
-# print(df.head(4))
-
-print((df.loc[df['HP'] == 90]))
+print(df.head(4))
