@@ -11,6 +11,9 @@ import pandas as pd
 # df.sort_values('name-of-column') sorts everything by given column. 
 # df.sort_values('name-of-column', ascending=False) would be reverse.
 # df['Attack + Defense'] = df['Attack'] + df['Defense'] is a way to create a new column that is the total of other columns.
+# another way of adding a column: df['name-of-new-column'] = df.iloc[:,1:2].sum(axis=1)
+# drop a specific column df.drop(columns=['name-of-column'])
+
 
 # There are built in pandas functions for csv(read_csv('')), excel(read_excel('')) and txt files.
 # txt files uses the read_csv but with a delimiter. 
