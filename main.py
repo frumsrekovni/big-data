@@ -1,4 +1,5 @@
 import pandas as pd
+# import matplotlib.pyplot as plt
 # Use pandas.head(number) to look at the top of data
 # Use pandas.tail(number) to look at the bottom of data
 # Use .columns to print out the all the column titles
@@ -13,13 +14,18 @@ import pandas as pd
 # df['Attack + Defense'] = df['Attack'] + df['Defense'] is a way to create a new column that is the total of other columns.
 # another way of adding a column: df['name-of-new-column'] = df.iloc[:,1:2].sum(axis=1)
 # drop a specific column df.drop(columns=['name-of-column'])
+# df.loc[~df['column-name'].str.contains('given-string')] is a way to remove all rows in the column-name that contain the given string.
 
+# df.loc[df['column-name'].str.contains('given1|given2', flags=re.I, regex=True)] 
+# give all rows that contain given1 or given2 in column-name. The re.I ignores capitalization.
+
+# df.loc[df['column-name'].str.contains('^given-string[a-z]*', flags=re.I, regex=True)]
+# give all rows that starts with given-string in column-name.
 
 # There are built in pandas functions for csv(read_csv('')), excel(read_excel('')) and txt files.
 # txt files uses the read_csv but with a delimiter. 
 
 df = pd.read_csv('pokemon_data.csv')
-df['Attack + Defense'] = df['Attack'] + df['Defense']
 #df_excel = pd.read_excel('pokemon_data.xlsx')
 
-print(df.head(4))
+print(df[0:10])
