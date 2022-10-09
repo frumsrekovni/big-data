@@ -25,7 +25,7 @@ import pandas as pd
 # There are built in pandas functions for csv(read_csv('')), excel(read_excel('')) and txt files.
 # txt files uses the read_csv but with a delimiter. 
 
-df = pd.read_csv('pokemon_data.csv')
+df = pd.read_excel('data/excel/japanese-people-data.xlsx')
 #df_excel = pd.read_excel('pokemon_data.xlsx')
 
-print(df[0:10])
+print(df[0:2])
